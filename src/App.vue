@@ -38,6 +38,7 @@ import Lights from "./views/Lights";
 import HVAC from "./views/HVAC";
 import Access from "./views/Access";
 import Calendar from "./views/Calendar";
+import Diagnostics from "./views/Diagnostics";
 import Settings from "./views/Settings";
 
 export default {
@@ -48,6 +49,7 @@ export default {
     HVAC,
     Access,
     Calendar,
+    Diagnostics,
     Settings
   },
   data: () => ({
@@ -59,6 +61,7 @@ export default {
       { name: "HVAC", icon: "fan" },
       { name: "Access", icon: "lock-open" },
       { name: "Calendar", icon: "calendar-clock" },
+      { name: "Diagnostics", icon: "flash" },
       { name: "Settings", icon: "settings" }
     ]
   }),
@@ -67,3 +70,9 @@ export default {
   }
 };
 </script>
+
+<style>
+html {
+  overflow-y: auto;
+}
+</style>

@@ -1,45 +1,32 @@
 <template>
-  <v-sheet height="500">
-    <v-calendar
-      type="month"
-      now="2019-01-08"
-      value="2019-01-08"
-      :events="events"
-    ></v-calendar>
-  </v-sheet>
+  <div>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Name</th>
+            <th class="text-center">Day</th>
+            <th class="text-center">Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="event in events" :key="event.id">
+            <td class="text-left">{{ event.name }}</td>
+            <td class="text-center">{{ event.day }}</td>
+            <td class="text-center">
+              {{ event.frequency }} week{{ event.frequency === 1 ? "" : "s" }}
+            </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    events: [
-      {
-        name: "Vacation",
-        start: "2018-12-30",
-        end: "2019-01-02"
-      },
-      {
-        name: "Meeting",
-        start: "2019-01-07"
-      },
-      {
-        name: "30th Birthday",
-        start: "2019-01-03"
-      },
-      {
-        name: "New Year",
-        start: "2019-01-01"
-      },
-      {
-        name: "Conference",
-        start: "2019-01-21"
-      },
-      {
-        name: "Hackathon",
-        start: "2019-01-30",
-        end: "2019-02-01"
-      }
-    ]
+    events: [{ id: 1, name: "Monday", day: "Monday", frequency: 1 }]
   })
 };
 </script>

@@ -2,11 +2,9 @@
   <div>
     <v-row>
       <v-col>
-        <v-card class="mx-auto text-center" max-width="460">
+        <v-card class="mx-auto text-center" max-width="360">
           <v-card-title>Main Hall Lights</v-card-title>
           <v-card-text>
-            <v-icon size="84" color="green">mdi-lightbulb</v-icon>
-            <v-icon size="84" color="green">mdi-lightbulb</v-icon>
             <v-icon size="84" color="green">mdi-lightbulb</v-icon>
             <v-icon size="84" color="orange">mdi-lightbulb</v-icon>
             <v-icon size="84" color="red">mdi-lightbulb</v-icon>
@@ -19,7 +17,7 @@
         </v-card>
       </v-col>
       <v-col>
-        <v-card class="mx-auto text-center" max-width="460">
+        <v-card class="mx-auto text-center" max-width="360">
           <v-card-title>Foyer Lights</v-card-title>
           <v-card-text>
             <v-icon size="84" color="green">mdi-lightbulb</v-icon>

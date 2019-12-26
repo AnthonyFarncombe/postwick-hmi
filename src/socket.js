@@ -1,4 +1,5 @@
 import io from "socket.io-client";
+import store from "./store";
 
 const socket = io("http://localhost:3000");
 
@@ -8,7 +9,7 @@ socket.on("connect", () => {
   setTimeout(() => {
     console.log("Getting variables from server...");
     socket.emit("getVariables", {}, variables => {
-      console.log(variables);
+      store.commit("setVariables", variables);
     });
   }, 1000);
 });

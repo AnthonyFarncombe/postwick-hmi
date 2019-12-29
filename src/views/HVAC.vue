@@ -26,7 +26,7 @@ export default {
   computed: {
     sensors() {
       return this.$store.state.variables.filter(
-        v => v.group === "temperatureSensors"
+        v => v.group === "TemperatureSensors"
       );
     }
   }

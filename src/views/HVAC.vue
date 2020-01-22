@@ -11,7 +11,9 @@
             <tbody>
               <tr v-for="sensor in sensors" :key="sensor.name">
                 <td class="text-left">{{ sensor.text }}</td>
-                <td class="text-right">{{ sensor.value.toFixed(1) }} °C</td>
+                <td class="text-right">
+                  {{ (sensor.value / 10).toFixed(1) }} °C
+                </td>
               </tr>
             </tbody>
           </template>

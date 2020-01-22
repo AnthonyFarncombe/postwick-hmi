@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style>
-html {
+body {
   overflow-y: auto;
 }
 </style>

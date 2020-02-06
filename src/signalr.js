@@ -8,7 +8,10 @@ export let connection;
   if (process.env.NODE_ENV === "development")
     url = "http://localhost:5000/hmihub";
 
-  connection = new HubConnectionBuilder().withUrl(url).build();
+  connection = new HubConnectionBuilder()
+    .withUrl(url)
+    .withAutomaticReconnect()
+    .build();
 
   connection.on("VariableValueUpdated", (name, value) => {
     store.commit("setVariableValue", { name, value });
@@ -17,6 +20,5 @@ export let connection;
   await connection.start();
 
   const variables = await connection.invoke("GetVariables");
-  console.log(variables);
   store.commit("setVariables", variables);
 })();

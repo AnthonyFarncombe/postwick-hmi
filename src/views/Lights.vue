@@ -47,7 +47,7 @@ export default {
   },
   created() {
     const lights = this.$store.state.variables.filter(
-      v => v.group === "Lights" && /.+Status$/.test(v.name)
+      v => v.group === "lights" && /.+Status$/.test(v.name)
     );
 
     lights.forEach(l => {

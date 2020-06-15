@@ -11,6 +11,7 @@
     "@mdi/font": "^3.6.95",
     "@microsoft/signalr": "^3.1.0",
     "core-js": "^2.6.11",
+    "moment": "^2.26.0",
     "roboto-fontface": "*",
     "socket.io-client": "^2.3.0",
     "vue": "^2.6.11",

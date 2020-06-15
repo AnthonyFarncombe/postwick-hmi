@@ -72,7 +72,8 @@ export default {
 </script>
 
 <style>
+html,
 body {
-  overflow-y: auto;
+  overflow-y: hidden !important;
 }
 </style>

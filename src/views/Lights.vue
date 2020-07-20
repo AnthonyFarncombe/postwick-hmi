@@ -34,9 +34,14 @@ export default {
   }),
   methods: {
     lightClass(light) {
-      if (light.phasing && light.phasing.value) return "orange";
-      else if (light.value) return "green";
-      else return "red";
+      switch (light.value) {
+        case 3:
+          return "orange";
+        case 1:
+          return "green";
+        default:
+          return "red";
+      }
     },
     toggle(light) {
       this.$store.dispatch("setVariableValue", {
@@ -49,12 +54,6 @@ export default {
     const lights = this.$store.state.variables.filter(
       v => v.group === "lights" && /.+Status$/.test(v.name)
     );
-
-    lights.forEach(l => {
-      l.phasing = this.$store.state.variables.find(
-        v => v.name === l.name.substr(0, l.name.length - 6) + "Phasing"
-      );
-    });
 
     this.lights = lights;
   }

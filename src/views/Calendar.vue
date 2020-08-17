@@ -122,13 +122,13 @@
         </v-dialog>
       </v-toolbar>
     </template>
-    <template #item.frequency="{ value }">
+    <template v-slot:[`item.frequency`]="{ value }">
       {{ frequencyOptions.find(o => o.value === value).text }}
     </template>
-    <template #item.startDate="{ value }">
+    <template v-slot:[`item.startDate`]="{ value }">
       {{ formatStartDate(value) }}
     </template>
-    <template #item.overrideDay="{ value }">
+    <template v-slot:[`item.overrideDay`]="{ value }">
       {{ value ? "Yes" : "No" }}
     </template>
   </v-data-table>

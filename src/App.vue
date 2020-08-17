@@ -37,6 +37,7 @@ import Dashboard from "./views/Dashboard";
 import Lights from "./views/Lights";
 import HVAC from "./views/HVAC";
 import Access from "./views/Access";
+import Water from "./views/Water";
 import Calendar from "./views/Calendar";
 import Diagnostics from "./views/Diagnostics";
 import Settings from "./views/Settings";
@@ -48,6 +49,7 @@ export default {
     Lights,
     HVAC,
     Access,
+    Water,
     Calendar,
     Diagnostics,
     Settings
@@ -60,6 +62,7 @@ export default {
       { name: "Lights", icon: "lightbulb" },
       { name: "HVAC", icon: "fan" },
       { name: "Access", icon: "lock-open" },
+      { name: "Water", icon: "water" },
       { name: "Calendar", icon: "calendar-clock" },
       { name: "Diagnostics", icon: "flash" },
       { name: "Settings", icon: "settings" }

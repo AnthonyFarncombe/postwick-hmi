@@ -11,7 +11,7 @@
                 :class="sensor.value ? 'green' : 'red'"
               >
                 <td class="text-left">
-                  <span class="title">Moisture Sensor {{ sensor.name }}</span>
+                  <span class="title">Moisture Sensor {{ sensor.text }}</span>
                 </td>
                 <td class="text-right">
                   <span class="title">{{

@@ -20,11 +20,11 @@
       <v-toolbar-title>Postwick BMS</v-toolbar-title>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container fluid>
         <component :is="pages[activePage].name" />
       </v-container>
-    </v-content>
+    </v-main>
 
     <v-footer app>
       <span>&copy; 2019 NCH Construction Ltd</span>

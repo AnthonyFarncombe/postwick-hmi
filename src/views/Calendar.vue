@@ -188,7 +188,8 @@ export default {
         { value: "0", text: "One Off" },
         { value: "1", text: "Every Week" },
         { value: "2", text: "Every Other Week" },
-        { value: "3", text: "Every Three Weeks" }
+        { value: "3", text: "Every Three Weeks" },
+        { value: "CM", text: "Care Meeting" }
       ];
       if (this.editedSchedule.dayOfWeek === "Saturday")
         options.push({ value: "CM", text: "Care Meeting" });

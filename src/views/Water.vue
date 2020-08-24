@@ -29,13 +29,10 @@
 
 <script>
 export default {
-  data: () => ({
-    moistureSensors: []
-  }),
-  created() {
-    this.moistureSensors = this.$store.state.variables.filter(
-      v => v.group === "water"
-    );
+  computed: {
+    moistureSensors() {
+      return this.$store.state.variables.filter(v => v.group === "water");
+    }
   }
 };
 </script>

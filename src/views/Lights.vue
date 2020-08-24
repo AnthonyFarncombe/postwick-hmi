@@ -29,9 +29,13 @@
 
 <script>
 export default {
-  data: () => ({
-    lights: []
-  }),
+  computed: {
+    lights() {
+      return this.$store.state.variables.filter(
+        v => v.group === "lights" && /.+Status$/.test(v.name)
+      );
+    }
+  },
   methods: {
     lightClass(light) {
       switch (light.value) {
@@ -49,13 +53,6 @@ export default {
         value: true
       });
     }
-  },
-  created() {
-    const lights = this.$store.state.variables.filter(
-      v => v.group === "lights" && /.+Status$/.test(v.name)
-    );
-
-    this.lights = lights;
   }
 };
 </script>
